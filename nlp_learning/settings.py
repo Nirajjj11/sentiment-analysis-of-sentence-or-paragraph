@@ -24,8 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$*+=tlf89x=izf$=gr=0)k%i3q-r8)rwaeo*)h9*jz2=z%*5jm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False           # for deployment
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -52,9 +51,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    
-    "django.middleware.security.SecurityMiddleware",                # for deployment
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'nlp_learning.urls'
